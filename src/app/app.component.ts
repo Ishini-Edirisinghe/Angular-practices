@@ -15,4 +15,5 @@ import { FooterComponent } from "./footer/footer.component";
 export class AppComponent {
   title = 'dg-stats';
   firstName="Dammi";
+  imagepath="assets/pic.jpeg";
 }
