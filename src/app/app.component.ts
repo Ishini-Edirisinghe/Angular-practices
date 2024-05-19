@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Import CommonModule
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';  // Import FormsModule
 import { HeaderComponent } from "./header/header.component";
@@ -11,19 +12,32 @@ import { FooterComponent } from "./footer/footer.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [RouterOutlet, FormsModule, HeaderComponent, SidenavComponent, MainComponent, FooterComponent]
+    imports: [RouterOutlet,
+              CommonModule, // Import CommonModule here
+              FormsModule,
+              HeaderComponent, 
+              SidenavComponent,
+              MainComponent, 
+              FooterComponent]
 })
 export class AppComponent {
   title = 'dg-stats';
-  firstName="Dammi";
-  imagepath="assets/pic.jpeg";
-  defaultVal="Dekum";
+  // numbers=[
+  //   'one',
+  //   'two',
+  //   'three',
+  //   'four',
+  //   'five',
+  //   'six',
+  //   'seven',
+  //   'eight',
+  //   'nine',
+  //   'ten'
+  // ];
 
-  passValueToComponent(event: Event): void {
-    const inputElement = event.target as HTMLInputElement;
-    if (inputElement) {
-      console.log(inputElement.value);
-    }
-
+  isApproved=false;
+  
+  approve(status: boolean){
+    this.isApproved=status;
   }
 }
