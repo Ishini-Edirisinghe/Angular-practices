@@ -20,11 +20,13 @@
     
         <h1>My mother is {{firstName}}</h1>
     </div>
-    <img [src]="imagepath" alt="">
+    <img [src]="imagepath" alt=""/>
    
     <div class="footer">
         <app-footer></app-footer>
     </div>
+    <input type="text" (input)="passValueToComponent($event)"/>
+    <input type="text" [(ngModel)]="defaultVal"/> <h1>{{defaultVal}}</h1>
 </div>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
