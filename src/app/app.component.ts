@@ -22,21 +22,11 @@ import { FooterComponent } from "./footer/footer.component";
 })
 export class AppComponent {
   title = 'dg-stats';
-  numbers=[
-    'one','two','three',
-    'four',
-    'five',
-    'six',
-    'seven',
-    'eight',
-    'nine',
-    'ten'
-  ];
-  luckyNumber=0;
 
-  isApproved=false;
-  
-  approve(status: boolean){
-    this.isApproved=status;
+  highlightColor='white';
+
+  highlight(color:string){
+    this.highlightColor=color;
+
   }
 }
