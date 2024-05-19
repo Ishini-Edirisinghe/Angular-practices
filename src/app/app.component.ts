@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';  // Import FormsModule
-import { HeaderComponent } from "./header/header.component";
-import { SidenavComponent } from "./sidenav/sidenav.component";
-import { MainComponent } from "./main/main.component";
-import { FooterComponent } from "./footer/footer.component";
+import { FormsModule } from '@angular/forms';
+import { ParentComponent } from "./parent/parent.component";  // Import FormsModule
+
 
 @Component({
     selector: 'app-root',
@@ -13,25 +11,13 @@ import { FooterComponent } from "./footer/footer.component";
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     imports: [RouterOutlet,
-              CommonModule, // Import CommonModule here
-              FormsModule,
-              HeaderComponent, 
-              SidenavComponent,
-              MainComponent, 
-              FooterComponent]
+        CommonModule, // Import CommonModule here
+        FormsModule, ParentComponent]
 })
 export class AppComponent {
   title = 'dg-stats';
 
-  highlightColor='white';
-  isStyleApplied=false;
+ 
 
-  highlight(color:string){
-    this.highlightColor=color;
-
-  }
-  toggleStyle(){
-    this.isStyleApplied=!this.isStyleApplied;
-
-  }
+  
 }

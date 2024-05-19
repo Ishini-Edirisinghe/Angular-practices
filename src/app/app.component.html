@@ -8,38 +8,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<div class="container">
- <h2>Attribute directives- ngClass</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <p [ngClass]="{
-                'red-color':highlightColor=== 'red',
-                'green-color' : highlightColor=== 'green',
-                'blue' : highlightColor === 'blue'
-            }">Click any button to highlight me!</p>
-        </div>
-        <div class="col-md-12">
-            <button class="btn btn-danger" (click)="highlight('red')">Red</button>
-            <button class="btn btn-success" (click)="highlight('green')">Green</button>
-            <button class="btn btn-primary" (click)="highlight('blue')">Blue</button>
-
-        </div>
-    </div>
-    <h2>Attribute directives- ngStyle</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <p [ngStyle]="{
-                color:isStyleApplied===true?'white':'black',
-                backgroundColor:isStyleApplied ?'green':'white'
-            }">Click button to toggle the style</p>
-        </div>
-        <div class="col-md-12">
-            <button class="btn btn-primary" (click)="toggleStyle()">Toggle Style</button>
-
-        </div>
-    </div>
-    
-</div>
+<app-parent></app-parent>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
