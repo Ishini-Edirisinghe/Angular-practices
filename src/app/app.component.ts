@@ -32,6 +32,7 @@ export class AppComponent {
     'nine',
     'ten'
   ];
+  luckyNumber=0;
 
   isApproved=false;
   

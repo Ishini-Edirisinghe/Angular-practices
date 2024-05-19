@@ -27,7 +27,23 @@
             <p *ngFor="let number of numbers;let i =index">{{i+1}}={{number}}</p>
         </div>
     </div>
+    <h2>Structual Directives -ngSwitch</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="number" name="luckynumber" [(ngModel)]="luckyNumber">
+        </div>
+        <div class="col-md-12" [ngSwitch]="luckyNumber">
+            <p *ngSwitchCase="1">Strong</p>
+            <p *ngSwitchCase="2">Weak</p>
+            <p *ngSwitchCase="3">Inteligent</p>
+            <p *ngSwitchCase="4">Fool</p>
+            <p *ngSwitchCase="5">Brave</p>
+            <p *ngSwitchDefault>Enter numbers from 1 to 5</p>
 
+
+
+        </div>
+    </div>
 
 </div>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
