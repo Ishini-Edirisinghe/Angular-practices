@@ -20,7 +20,14 @@
             <p *ngIf="!isApproved">Sorry , your application has been rejected</p>
         </div>
     </div>
-    
+    <hr>
+    <h2>Structual Directives -ngFor</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <p *ngFor="let number of numbers;let i =index">{{i+1}}={{number}}</p>
+        </div>
+    </div>
+
 
 </div>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

@@ -22,18 +22,16 @@ import { FooterComponent } from "./footer/footer.component";
 })
 export class AppComponent {
   title = 'dg-stats';
-  // numbers=[
-  //   'one',
-  //   'two',
-  //   'three',
-  //   'four',
-  //   'five',
-  //   'six',
-  //   'seven',
-  //   'eight',
-  //   'nine',
-  //   'ten'
-  // ];
+  numbers=[
+    'one','two','three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+    'ten'
+  ];
 
   isApproved=false;
   
