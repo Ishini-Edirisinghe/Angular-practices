@@ -24,9 +24,14 @@ export class AppComponent {
   title = 'dg-stats';
 
   highlightColor='white';
+  isStyleApplied=false;
 
   highlight(color:string){
     this.highlightColor=color;
+
+  }
+  toggleStyle(){
+    this.isStyleApplied=!this.isStyleApplied;
 
   }
 }
