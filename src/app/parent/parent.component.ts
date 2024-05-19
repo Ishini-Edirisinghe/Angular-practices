@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 import { CommonModule } from '@angular/common';
 import { ChildComponent } from "../child/child.component";
+import { Console } from 'console';
 
 @Component({
     selector: 'app-parent',
@@ -14,4 +15,9 @@ import { ChildComponent } from "../child/child.component";
 })
 export class ParentComponent {
     firstNameInParent="";
+    msgFromChild="";
+
+    receiveMessage(msg: string){
+       this.msgFromChild=msg;
+    }
 }

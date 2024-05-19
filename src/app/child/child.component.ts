@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -11,4 +11,15 @@ export class ChildComponent {
 
   @Input() 
   firstName='Ishini';
+
+  @Output()
+  sendMessageEmitter =new EventEmitter()
+
+  sendMessageToParent(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement) {
+      // console.log(inputElement.value);
+      this.sendMessageEmitter.emit(inputElement.value);
+    }
+  }
 }
