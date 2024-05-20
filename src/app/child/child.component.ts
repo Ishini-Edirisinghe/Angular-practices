@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,19 +7,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './child.component.html',
   styleUrl: './child.component.scss'
 })
-export class ChildComponent {
+export class ChildComponent implements OnInit {
+  constructor(){
+    console.log("Child constructor is called")
+   }
 
-  @Input() 
-  firstName='Ishini';
+ngOnInit(){
+  console.log("Child OnInit is called")
 
-  @Output()
-  sendMessageEmitter =new EventEmitter()
+}
 
-  sendMessageToParent(event: Event): void {
-    const inputElement = event.target as HTMLInputElement;
-    if (inputElement) {
-      // console.log(inputElement.value);
-      this.sendMessageEmitter.emit(inputElement.value);
-    }
-  }
+  
 }
